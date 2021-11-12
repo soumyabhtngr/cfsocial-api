@@ -1,0 +1,8 @@
+name = "cfsocial-api"
+type = "javascript"
+
+account_id = "f376fd342aa6769231f19a0947c482f4"
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2021-11-12"
