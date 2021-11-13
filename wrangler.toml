@@ -6,3 +6,6 @@ workers_dev = true
 route = ""
 zone_id = ""
 compatibility_date = "2021-11-12"
+kv_namespaces = [ 
+  { binding = "POST", id = "4831b1476f484bfd91519c471aa8a6de" }
+]
