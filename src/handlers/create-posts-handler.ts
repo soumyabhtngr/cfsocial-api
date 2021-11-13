@@ -1,6 +1,6 @@
 import Store from '../posts-store'
 
-const CreateHandler = async request => {
+const CreateHandler = async (request: any) => {
     const posts = new Store();
     const postContent = request.body;
 

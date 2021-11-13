@@ -1,11 +1,15 @@
 name = "cfsocial-api"
 type = "javascript"
-
-account_id = "f376fd342aa6769231f19a0947c482f4"
-workers_dev = true
-route = ""
 zone_id = ""
-compatibility_date = "2021-11-12"
+account_id = "f376fd342aa6769231f19a0947c482f4"
+route = ""
+workers_dev = true
+compatibility_date = "2021-11-13"
 kv_namespaces = [ 
   { binding = "POST", id = "4831b1476f484bfd91519c471aa8a6de" }
 ]
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "service-worker"

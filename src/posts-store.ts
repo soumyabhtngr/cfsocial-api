@@ -17,24 +17,28 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default class PostsStore {
     async getAllPosts() {
+        // @ts-ignore
         const keys = await POST.list().keys;
         const response = [];
         for (const key of keys) {
+            // @ts-ignore
             response.push(await POST.get(key.name));
         }
 
         return response;
     }
     async all() {
-        return await getAllPosts();
+        return await this.getAllPosts();
     }
-    async find(id) {
+    async find(id: string) {
+        // @ts-ignore
         return await POST.get(id);
     }
-    async create(post) {
+    async create(post: string) {
         const uuid = uuidv4();
-        await POST.put(uuid, JSON.stringify(post));
+        // @ts-ignore
+        await POST.put(uuid, post);
 
-        return await getAllPosts();
+        return await this.getAllPosts();
     }
 }
