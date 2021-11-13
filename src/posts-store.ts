@@ -9,8 +9,8 @@ export default class PostsStore {
             // @ts-ignore
             const id = value.keys[i].name;
             // @ts-ignore
-            const post = await POST.get(id);
-            response.push({ id, ...post });
+            const result = await POST.get(id);
+            response.push({ id, result });
         }
 
         return response;

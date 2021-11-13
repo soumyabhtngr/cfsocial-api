@@ -6,7 +6,10 @@ route = ""
 workers_dev = true
 compatibility_date = "2021-11-13"
 kv_namespaces = [ 
-  { binding = "POST", id = "4831b1476f484bfd91519c471aa8a6de" }
+  { binding = "POST", id = "4831b1476f484bfd91519c471aa8a6de" },
+  { binding = "MEDIA", id = "51112f75272441dc92b83dd76a4e534b" }
+  { binding = "COMMENT", id = "f7b5e8bb06664f30a1c87a2a4e360b98" }
+  { binding = "LIKES", id = "c9809fd7df3d460c9165c775e478bae4" }
 ]
 
 [build]
