@@ -5,7 +5,8 @@ const GetHandler = async () => {
     const body = JSON.stringify(await posts.all());
     const headers = {
         'Access-Control-Allow-Origin': '*',
-        'Content-type': 'application/json'
+        'Content-type': 'application/json',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'
     };
     return new Response(body, { headers });
 }

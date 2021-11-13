@@ -7,7 +7,8 @@ const CreateHandler = async (request: any) => {
     const response = JSON.stringify(await posts.create(postContent));
     const headers = {
         'Access-Control-Allow-Origin': '*',
-        'Content-type': 'application/json'
+        'Content-type': 'application/json',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'
     };
     return new Response(response, { headers });
 }
