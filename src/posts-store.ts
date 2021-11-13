@@ -18,11 +18,14 @@ import { v4 as uuidv4 } from 'uuid';
 export default class PostsStore {
     async getAllPosts() {
         // @ts-ignore
-        const keys = await POST.list().keys;
+        const value = await POST.list();
         const response = [];
-        for (const key of keys) {
+        for (let i = 0; i < value.keys.length; i++) {
             // @ts-ignore
-            response.push(await POST.get(key.name));
+            const id = value.keys[i].name;
+            // @ts-ignore
+            const post = await POST.get(id);
+            response.push({ id, ...post });
         }
 
         return response;
